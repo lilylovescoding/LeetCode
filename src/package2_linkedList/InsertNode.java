@@ -1,4 +1,4 @@
-package linkedlist;
+package package2_linkedList;
 
 public class InsertNode {
 
@@ -9,11 +9,13 @@ public class InsertNode {
             return newNode;
         }
 
+        //插入在头部
         if(target <= head.val) {
             newNode.next = head;
             return newNode;
         }
 
+        //插入在中间or尾部
         ListNode cur = head;
         while(cur.next != null && cur.next.val < target) {
             cur = cur.next;

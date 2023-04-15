@@ -1,4 +1,4 @@
-package linkedlist;
+package package2_linkedList;
 
 public class Append {
     //在头部添加一个元素

@@ -1,8 +1,4 @@
-package contest20230409;
-
-import contest20230402.FindMatrix6363;
-
-import java.util.List;
+package package111_contest20230409;
 
 public class DiagonalPrime6361 {
 

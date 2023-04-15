@@ -1,6 +1,4 @@
-package linkedlist;
-
-import array_arraylist.ElementDeduplication;
+package package2_linkedList;
 
 public class CountLength {
     public int count(ListNode head) {

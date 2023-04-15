@@ -1,4 +1,4 @@
-package basic;
+package package1_array_arraylist;
 
 public class Array {
 

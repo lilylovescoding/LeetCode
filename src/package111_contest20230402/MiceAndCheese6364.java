@@ -1,7 +1,6 @@
-package contest20230402;
+package package111_contest20230402;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class MiceAndCheese6364 {
     public int miceAndCheese(int[] reward1, int[] reward2, int k) {

@@ -1,4 +1,4 @@
-package linkedlist;
+package package2_linkedList;
 
 public class ListNode {
 
