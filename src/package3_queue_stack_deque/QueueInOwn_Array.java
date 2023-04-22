@@ -1,39 +1,36 @@
 package package3_queue_stack_deque;
 
+import java.util.Arrays;
+
 public class QueueInOwn_Array {
     private int[] array;
-    private int head;
-    private int tail;
     private int size;
 
-    public QueueInOwn_Array(int capacity) {
-        array = new int[capacity];
+    public QueueInOwn_Array(int cap) {
+        array = new int[cap];
+        size = 0;
     }
 
-    public boolean offer(int ele){
+    public int[] offer(int ele){
         if(isFull()) {
-            return false;
+            return array;
         }
-
-        array[tail] = ele;
-        tail = tail + 1 == array.length ? 0 : tail + 1;
+        array[size] = ele;
         size++;
-        return true;
+        return array;
     }
 
     public int peek() {
-        return isEmpty() ? null : array[head];
+        return isEmpty() ? null : array[0];
     }
 
-    public Integer poll() {
+    public int[] poll() {
         if(isEmpty()) {
             return null;
         }
-        int result = array[head];
-        head = head + 1 == array.length ? 0 : head + 1;
+        array[0] = 0;
         size --;
-        return result;
-
+        return array;
     }
 
     public int size() {
@@ -48,5 +45,17 @@ public class QueueInOwn_Array {
         return size == 0;
     }
 
+    public static void main(String[] args) {
+        QueueInOwn_Array s = new QueueInOwn_Array(3);
+        s.offer(5);
+        s.offer(2);
+        s.offer(3);
+        s.offer(4);
+        System.out.println(Arrays.toString(s.array));
 
+        System.out.println(s.peek());
+
+        s.poll();
+        System.out.println(Arrays.toString(s.array));
+    }
 }

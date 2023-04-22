@@ -8,29 +8,12 @@ public class QueueInOwn_LinkedList {
     private int size;
 
     public QueueInOwn_LinkedList() {
-
-    }
-    //  1 -> 2 -> 3 -> 4
-    //  H              T
-    //  R    H
-    public Integer poll() {
-        if(head == null) {
-            return null;
-        } else {
-            ListNode result = head;
-            head = head.next;
-            result.next = null;
-            size --;
-            return result.val;
-        }
-
+        head = null;
+        tail = null;
+        size = 0;
     }
 
-
-    // 1 -> 2 -> 3 -> 4 -> 5
-    // H              T
-    // H                   T
-    public boolean offer(int ele) {
+    public ListNode offer(int ele) {
         if(head == null) {
             head = new ListNode(ele);
             tail = head;
@@ -39,15 +22,26 @@ public class QueueInOwn_LinkedList {
             tail = tail.next;
         }
         size ++;
-        return true;
+        return head;
     }
-
 
     public Integer peek() {
         if(head == null) {
             return null;
         }
         return head.val;
+    }
+
+    public ListNode poll() {
+        if(head == null) {
+            return null;
+        } else {
+            ListNode result = head;
+            head = head.next;
+            result.next = null;
+            size --;
+            return head;
+        }
     }
 
     public int size() {
@@ -58,7 +52,28 @@ public class QueueInOwn_LinkedList {
         return size == 0;
     }
 
+    public static void main(String[] args) {
+        QueueInOwn_LinkedList s = new QueueInOwn_LinkedList();
+        dayin(s.head);
 
+        s.offer(1);
+        s.offer(2);
+        s.offer(3);
+        dayin(s.head);
 
+        int peek = s.peek();
+        System.out.println(peek);
 
+        s.poll();
+        dayin(s.head);
+    }
+
+    public static void dayin(ListNode head) {
+        ListNode cur = head;
+        while(cur != null) {
+            System.out.print(cur.val + "->");
+            cur = cur.next;
+        }
+        System.out.println();
+    }
 }
