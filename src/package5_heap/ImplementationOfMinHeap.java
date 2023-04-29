@@ -8,7 +8,7 @@ public class ImplementationOfMinHeap {
     private int size;
 
     public ImplementationOfMinHeap(int[] array) {
-        if(array == null || array.length <= 1) {
+        if(array == null || array.length <= 0) {
             throw new IllegalArgumentException("input array can not be null or empty");
         }
         this.array = array;
@@ -27,7 +27,7 @@ public class ImplementationOfMinHeap {
             throw new IllegalArgumentException("capacity can not be <= 0");
         }
         this.array = new int[cap];
-        size = 0;
+        size = 0;  //   size不应该等于cap吗？
     }
 
     public int size() {
@@ -97,7 +97,7 @@ public class ImplementationOfMinHeap {
         size++;
         percolateUp(size - 1);
     }
-    
+
     public int update(int index, int ele) {
         if(index < 0 || index > size - 1) {
             throw new ArrayIndexOutOfBoundsException("invalid index range");
