@@ -16,7 +16,7 @@ public class ImplementationOfMinHeap {
         heapify();
     }
 
-    private void heapify() {
+    public void heapify() {
         for(int i = size/2 - 1; i >= 0; i--) {
             percolateDown(i);
         }
