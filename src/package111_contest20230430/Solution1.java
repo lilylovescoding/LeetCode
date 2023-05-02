@@ -1,4 +1,4 @@
-package packagr111_contest20230430;
+package package111_contest20230430;
 
 public class Solution1 {
     public int isWinner(int[] player1, int[] player2) {
