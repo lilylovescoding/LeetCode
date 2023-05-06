@@ -1,6 +1,6 @@
 package package4_binarytree;
 
-public class Pre_In_PostOrder {
+public class Pre_In_PostOrder_Recursive {
 
     private int val;
     TreeNode left;
