@@ -2,10 +2,10 @@ package package4_binarytree;
 
 public class Pre_In_PostOrder_Recursive {
 
-    private int val;
-    TreeNode left;
-    TreeNode root;
-    TreeNode right;
+//    private int val;
+//    TreeNode left;
+//    TreeNode root;
+//    TreeNode right;
 
     public void preOrder(TreeNode root) {
         if(root == null) {
