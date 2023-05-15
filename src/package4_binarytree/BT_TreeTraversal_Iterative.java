@@ -10,7 +10,6 @@ public class BT_TreeTraversal_Iterative {
         if(root == null) {
             return;
         }
-
         Deque<TreeNode> stack = new ArrayDeque<>();
         stack.offerFirst(root);
 
@@ -25,14 +24,12 @@ public class BT_TreeTraversal_Iterative {
             }
         }
     }
-
-    
+    //------------------------------------------------
     //采用stack数据结构和helper函数  【TC: O(n)  SC: O(h)】
     public void inOrderTraversal(TreeNode root) {
         if(root == null) {
             return;
         }
-
         Deque<TreeNode> stack = new ArrayDeque<>();
         TreeNode helper = root;
 
@@ -47,14 +44,12 @@ public class BT_TreeTraversal_Iterative {
             }
         }
     }
-
-
+    //------------------------------------------------
     //采用两个stack的数据结构 【TC:O(2n)  SC:O(h)】
     public void postOrderTraversal_1(TreeNode root) {
         if(root == null) {
             return;
         }
-
         Deque<TreeNode> stack = new ArrayDeque<>();
         Deque<TreeNode> temp = new ArrayDeque<>();
         stack.offerFirst(root);
@@ -74,14 +69,12 @@ public class BT_TreeTraversal_Iterative {
             System.out.println(temp.pollFirst().val);
         }
     }
-
-
+    //------------------------------------------------
     //创建prev和cur指针，一个stack结构
     public void postOrderTraversal2(TreeNode root) {
         if (root == null) {
             return;
         }
-
         List<Integer> result = new ArrayList<>();
         Deque<TreeNode> stack = new ArrayDeque<>();
         stack.offerFirst(root);
@@ -118,6 +111,4 @@ public class BT_TreeTraversal_Iterative {
             System.out.println(result.get(i));
         }
     }
-
-
 }
