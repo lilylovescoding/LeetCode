@@ -41,7 +41,16 @@ public class BT_Basic {
     }
 
     //4.判断二叉树是否symmetric
-
+    public boolean isSymmetric(TreeNode left, TreeNode right) {
+        if(left == null && right == null) {
+            return true;
+        } else if(left == null || right = null) {
+            return false;
+        } else if(left.val != right.val){
+            return false;
+        }
+        return isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);
+    }
 
     //5.判断二叉树是否identical、twist identical
 
