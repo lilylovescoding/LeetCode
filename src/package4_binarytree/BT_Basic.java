@@ -53,7 +53,43 @@ public class BT_Basic {
     }
 
     //5.判断二叉树是否identical、twist identical
+    public boolean isIdentical(TreeNode left, TreeNode right) {
+        if(left == null && right == null) {
+            return true;
+        } else if(left == null || right = null) {
+            return false;
+        } else if(left.val != right.val){
+            return false;
+        }
+        // 对称 || 完全一样
+        return (isIdentical(left.left, right.right) && isIdentical(left.right, right.left)) || (isIdentical(left.left, right.left) && isIdentical(left.right, right.right));
+    }
 
+    //6.判断是否为binary search tree  TC:O(n) SC:O(height)
+    public boolean isBST(TreeNode root, int min, int max) {
+        if (root == null) {
+            return true;
+        }
+        if (root.val <= min || root.val >= max) {
+            return false;
+        }
+        return isBST(root.left, min, root.val) && isBST(root.right, root.val, max);
+    }
 
-    //6.判断是否为binary search tree
+    // 7. 在给定范围内打印BST的值   TC:O(n)  SC:O(height)
+    public void printBSTInRange(TreeNode root, int k1, int k2) {
+        if (root == null) {
+            return;
+        }
+        if (root.val < k1) {
+            printBSTInRange(root.right, k1, k2);
+        }
+        if (root.val >= k1 && root.val <= k2) {
+            printBSTInRange(root.val);
+        }
+        if (root.val > k2) {
+            printBSTInRange(root.left, k1, k2);
+        }
+    }
+
 }
