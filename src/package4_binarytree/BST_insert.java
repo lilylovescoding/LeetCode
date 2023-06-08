@@ -41,8 +41,7 @@ public class BST_insert {
         }
         return root;
     }
-
-
+    
     //3. Iterative-2   TC:O(h) SC:O(1)
     public TreeNode insert3(TreeNode root, int target) {
         if(root == null) {
@@ -70,5 +69,4 @@ public class BST_insert {
         }
         return root;
     }
-    
 }
