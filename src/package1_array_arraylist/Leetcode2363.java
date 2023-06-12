@@ -1,7 +1,4 @@
 package package1_array_arraylist;
-
-import package12_dataConvert.Leetcode696;
-
 import java.util.*;
 
 public class Leetcode2363 {

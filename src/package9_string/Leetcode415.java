@@ -35,4 +35,12 @@ public class Leetcode415 {
         sb.reverse();
         return sb.toString();
     }
+
+    public static void main(String[] args) {
+        Leetcode415 lt= new Leetcode415();
+        String a = "11";
+        String b = "123";
+        String res = lt.addStrings(a, b); //134
+        System.out.println(res);
+    }
 }

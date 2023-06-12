@@ -3,6 +3,7 @@ package package9_string;
 import java.util.*;
 
 //给定一个包含大写字母和小写字母的字符串 s ，返回 通过这些字母构造成的 最长的回文串。"abccccdd"：7 "dccaccd"
+//TC:O(n)  SC:O(n)
 public class Leetcode409 {
     public int longestPalindrome(String s) {
         Map<Character, Integer> hs = new HashMap<>();  //创建HashMap
@@ -27,7 +28,7 @@ public class Leetcode409 {
     public static void main(String[] args) {
         Leetcode409 lt= new Leetcode409();
         String a = "aaaaaccc";
-        int res = lt.longestPalindrome(a);
+        int res = lt.longestPalindrome(a);  //7
         System.out.println(res);
     }
 }

@@ -1,9 +1,9 @@
 package package1_array_arraylist;
+import java.util.*;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+//给两个没有重复元素的数组nums1和nums2,返回下一个更大元素I
+//nums1 = [4,1,2], nums2 = [1,3,4,2] => [-1,3,-1]
+//TC:O(n) SC:O(n)
 public class Leetcode496 {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         Map<Integer, Integer> hs = new HashMap<>();
@@ -18,9 +18,6 @@ public class Leetcode496 {
             }
         }
         hs.put(nums2[nums2.length -1], -1);
-
-
-
         int[] arr = new int[nums1.length];
         for(int i = 0; i < nums1.length; i++){
             arr[i] = hs.get(nums1[i]);
@@ -33,7 +30,7 @@ public class Leetcode496 {
         int[] items1 = {4,1,2,5,3};
         int[] items2 = {5,6,1,3,4,2};
         int[] res = lt.nextGreaterElement(items1, items2);
-        dayin(res);
+        dayin(res);  //[-1,3,-1,6,4]
 //        System.out.println(res);
     }
 
