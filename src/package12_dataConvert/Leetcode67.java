@@ -1,7 +1,7 @@
 package package12_dataConvert;
-
-//两个二进制字符串a和b，以二进制字符串的形式返回它们的和
+//【二进制求和】：两个二进制字符串a和b，以二进制字符串的形式返回它们的和
 //a = "1010", b = "1011" => "10101"
+//a = "11", b = "1"  => "100"
 public class Leetcode67 {
     //Method1: 将a和b转为十进制数，求和后再转为二进制【Python和Java自带高精度运算,其他语言不适用】
     //在Java中，字符串超过33位，不能转为Integer；超过65位，不能转为Long；超过500000001位，不能转为BigInteger
@@ -13,7 +13,8 @@ public class Leetcode67 {
     }
 
 
-    //Method2：模拟【末尾对齐，逐位相加，逢二进一】 TC:O(n)  SC:O(1)
+    //Method2：模拟【末尾对齐，逐位相加，逢二进一】
+    // TC:O(n)  SC:O(1)
     public String addBinary2(String a, String b) {
         StringBuilder sb = new StringBuilder();
         int i = a.length() - 1;
@@ -44,7 +45,6 @@ public class Leetcode67 {
         if( res == 1) {
             sb.append(res);
         }
-
         return sb.reverse().toString();
     }
 

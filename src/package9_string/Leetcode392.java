@@ -1,7 +1,8 @@
 package package9_string;
 
-//给定字符串 s 和 t ，判断 s 是否为 t 的子序列。
-//s = "abc", t = "ahbgdc" => true
+//【判断子序列】：给定字符串 s 和 t ，判断 s 是否为 t 的子序列
+//s = "abc", t = "ahbgdc"  =>  true
+//s = "axc", t = "ahbgdc"  =>  false
 public class Leetcode392 {
 
     //双指针  TC:(m+n) OC(1)
@@ -27,6 +28,6 @@ public class Leetcode392 {
         String a = "abc";
         String b = "ahbgdc";
         Boolean res = lt.isSubsequence(a,b);
-        System.out.println(res);
+        System.out.println(res); //true
     }
 }

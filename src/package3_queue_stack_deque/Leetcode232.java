@@ -2,7 +2,7 @@ package package3_queue_stack_deque;
 
 import java.util.*;
 
-//使用两个栈实现先入先出队列。队列应当支持一般队列支持的所有操作（push、pop、peek、empty）
+//【用两个栈实现队列】：使用两个栈实现先入先出队列。队列应当支持一般队列支持的所有操作（push、pop、peek、empty）
 //TC:均摊O(1)  SC:O(n)
 public class Leetcode232 {
     Deque<Integer> s1;

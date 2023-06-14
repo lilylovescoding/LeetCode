@@ -1,4 +1,7 @@
 package package9_string;
+//【验证回文串】：给你一个字符串s，如果它是回文串，返回true；否则返回false
+//s = "A man, a plan, a canal: Panama" => true
+//s = "race a car" => false  |  " " => true
 public class Leetcode125 {
     //Method1: StringBuilder+翻转判断    TC:O(n) SC:O(n)
     public boolean isPalindrome1(String s) {

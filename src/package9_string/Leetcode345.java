@@ -3,7 +3,8 @@ package package9_string;
 import java.util.HashSet;
 import java.util.Set;
 
-//给一个字符串 s ，仅反转字符串中的所有元音字母，并返回结果字符串  "leetcode" => "leotcede"
+//【反转字符串中的元音字母】: 给一个字符串s，仅反转字符串中的所有元音字母，并返回结果字符串
+// s = "leetcode" => "leotcede"    |   s = "hello" => "holle"
 // TC:O(n) SC:O(n)
 public class Leetcode345 {
     public String reverseVowels(String s) {
@@ -16,7 +17,6 @@ public class Leetcode345 {
         }};
 
         char[] arr = s.toCharArray();
-
         int left = 0;
         int right = arr.length - 1;
         while(left < right) {

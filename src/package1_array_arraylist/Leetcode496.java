@@ -1,10 +1,12 @@
 package package1_array_arraylist;
 import java.util.*;
 
-//给两个没有重复元素的数组nums1和nums2,返回下一个更大元素I
+//【下一个更大元素】：给两个没有重复元素的数组nums1和nums2,返回下一个更大元素I
+// nums1中数字x的下一个更大元素是指x在nums2中对应位置右侧的第一个比x大的元素
 //nums1 = [4,1,2], nums2 = [1,3,4,2] => [-1,3,-1]
-//TC:O(n) SC:O(n)
+
 public class Leetcode496 {
+    //TC:O(n) SC:O(n)
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         Map<Integer, Integer> hs = new HashMap<>();
         for (int i = 0; i < nums2.length; i++) {

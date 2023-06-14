@@ -1,15 +1,16 @@
 package package2_linkedList;
 import java.util.*;
 
-//给一个链表的头节点head，判断链表中是否有环
-//head = [3,2,0,-4], pos = 1 => true | head = [1], pos = -1 => false
+//【环形链表】：给一个链表的头节点head，判断链表中是否有环
+//head = [3,2,0,-4], pos = 1 => true
+// head = [1], pos = -1 => false
 public class Leetcode141 {
+
     //Method1:快慢指针  TC:O(n)   SC:O(1)
     public boolean hasCycle(ListNode head) {
         if(head == null || head.next == null) {
             return false;
         }
-
         ListNode slow = head;
         ListNode fast = head.next;  //fast在head的next
 

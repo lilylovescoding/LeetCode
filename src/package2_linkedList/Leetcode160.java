@@ -1,11 +1,12 @@
 package package2_linkedList;
-
-import java.util.HashSet;
-import java.util.Set;
-
-//相交链表
-//给你两个单链表的头节点headA和headB，请你找出并返回两个单链表相交的起始节点。如果两个链表不存在相交节点，返回null
+import java.util.*;
+//错误，要改
+//【相交链表】：给你两个单链表的头节点headA和headB，请你找出并返回两个单链表相交的起始节点。如果两个链表不存在相交节点，返回null
+// listA = [4,1,8,4,5], listB = [5,6,1,8,4,5]  => 8
+// listA = [1,9,1,2,4], listB = [3,2,4]  => 2
+// listA = [2,6,4], listB = [1,5]  => null
 public class Leetcode160 {
+
     //Method1:哈希表  TC:O(m+n)   SC:O(m) [m:headA长度 n:headB长度]
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if(headA == null || headB == null) {
@@ -50,30 +51,5 @@ public class Leetcode160 {
             }
         }
         return cur1;
-    }
-
-    public static void main(String[] args) {
-        Leetcode160 lee = new Leetcode160();
-
-        ListNode headA = new ListNode(4);
-        ListNode a = new ListNode(1);
-        ListNode b = new ListNode(8);
-        ListNode f = new ListNode(4);
-        headA.next = a;
-        a.next = b;
-        b.next = f;
-
-        ListNode headB = new ListNode(5);
-        ListNode c = new ListNode(6);
-        ListNode d = new ListNode(1);
-        ListNode e = new ListNode(8);
-        ListNode g = new ListNode(4);
-        headB.next = c;
-        c.next = d;
-        d.next = e;
-        e.next = g;
-
-        ListNode res = lee.getIntersectionNode2(headA, headB);
-        System.out.println(res);
     }
 }

@@ -1,7 +1,7 @@
 package package3_queue_stack_deque;
 import java.util.*;
 
-//使用两个队列实现一个后入先出（LIFO）的栈，并支持普通栈的全部四种操作（push、top、pop 和 empty）
+//【用两个队列实现栈】：使用两个队列实现一个后入先出（LIFO）的栈，并支持普通栈的全部四种操作（push、top、pop 和 empty）
 //TC:O(n)  SC:O(n)
 class Leetcode225 {
     Queue<Integer> q1;

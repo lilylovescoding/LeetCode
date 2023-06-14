@@ -1,6 +1,8 @@
 package package9_string;
 
-//查找字符串数组中的最长公共前缀. "flower", "flow", "flight" => "fl"
+//【最长公共前缀】：查找字符串数组中的最长公共前缀
+// strs = {"flower", "flow", "flight"} => "fl"
+// strs = ["dog","racecar","car"]  =>  " "
 public class Leetcode14 {
     //Method1: 横向扫描  TC:O(mn) SC:O(1)
     public String longestCommonPrefix1(String[] str) {
@@ -52,7 +54,7 @@ public class Leetcode14 {
         String[] str = {"flower", "flow", "flight"};
         String res1 = a.longestCommonPrefix1(str);
         String res2 = a.longestCommonPrefix2(str);
-        System.out.println(res1);
-        System.out.println(res2);
+        System.out.println(res1);  //fl
+        System.out.println(res2);  //fl
     }
 }

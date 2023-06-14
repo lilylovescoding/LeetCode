@@ -1,10 +1,10 @@
 package package9_string;
-
 import java.util.*;
 
-//给定一个罗马数字，将其转换成整数. Eg: "III" => 3
-//TC:O(n)   SC:O(1)
+//【罗马数字转整数】：给定一个罗马数字，将其转换成整数
+// Eg: s = "III" => 3  ｜  s = "IV" => 4  |  s = "LVIII"  => 58
 public class Leetcode13 {
+    //TC:O(n)   SC:O(1)
     //建一个HashMap来存放给定数据
     Map<Character, Integer> values = new HashMap<Character, Integer>() {{
         put('I', 1);
@@ -34,6 +34,6 @@ public class Leetcode13 {
     public static void main(String[] args) {
         Leetcode13 a = new Leetcode13();
         int ans = a.romanToInt("IV");
-        System.out.println(ans);     //ans = 4
+        System.out.println(ans);  //ans = 4
     }
 }
