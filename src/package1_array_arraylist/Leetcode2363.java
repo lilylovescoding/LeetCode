@@ -26,7 +26,10 @@ public class Leetcode2363 {
             pair.add(k);
             pair.add(v);
             res.add(pair);
+            System.out.println(pair);
+            System.out.println(res);
         }
+
         //对res进行排序，用Lambda表达式写排序规则，a.get(0)，b.get(0) = k
         Collections.sort(res, (a,b) -> a.get(0) - b.get(0));
         return res;
@@ -37,6 +40,6 @@ public class Leetcode2363 {
         int[][] items1 = {{1,1},{4,5},{3,8}};
         int[][] items2 = {{3,1},{1,5}};
         List<List<Integer>> res = lt.mergeSimilarItems(items1, items2);
-        System.out.println(res);  //[[1, 6], [3, 9], [4, 5]]
+//        System.out.println(res);  //[[1, 6], [3, 9], [4, 5]]
     }
 }

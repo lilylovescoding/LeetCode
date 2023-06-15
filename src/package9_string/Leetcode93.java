@@ -9,6 +9,18 @@ import java.util.List;
 // s = "101023"  =>  ["1.0.10.23","1.0.102.3","10.1.0.23","10.10.2.3","101.0.2.3"]
 //public class Leetcode93 {
 //    public List<String> restoreIpAddresses(String s) {
+//        StringBuilder sb = new StringBuilder();
+//        int len = s.length();
+//        char[] arr = s.toCharArray();
+//        char[] arr2 = new char[len+4];
+//        for(int i = 0; i < len; i++) {
+//            if(len <= 3) {
+//                sb.append(arr[i]);
+//                sb.append('.');
+//            } else if () {
+//
+//            }
+//        }
 //
 //    }
 //}
