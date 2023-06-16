@@ -6,7 +6,7 @@ import java.util.*;
 //nums1 = [4,1,2], nums2 = [1,3,4,2] => [-1,3,-1]
 
 public class Leetcode496 {
-    //TC:O(n) SC:O(n)
+    //Method1：双层遍历+哈希表：TC:O(n^2 + m) SC:O(n)
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         Map<Integer, Integer> hs = new HashMap<>();
         for (int i = 0; i < nums2.length; i++) {
@@ -27,18 +27,23 @@ public class Leetcode496 {
         return arr;
     }
 
-    public static void main(String[] args) {
-        Leetcode496 lt= new Leetcode496();
-        int[] items1 = {4,1,2,5,3};
-        int[] items2 = {5,6,1,3,4,2};
-        int[] res = lt.nextGreaterElement(items1, items2);
-        dayin(res);  //[-1,3,-1,6,4]
-//        System.out.println(res);
-    }
-
-    public static void dayin(int[] res){
-        for(int i = 0; i < res.length; i++){
-            System.out.println(res[i]);
+    //Method2：单调栈+哈希表：TC:O(n+m) SC:O(n)
+    public int[] nextGreaterElement2(int[] nums1, int[] nums2) {
+        Map<Integer, Integer> hs = new HashMap<>();
+        Deque<Integer> stack = new ArrayDeque<>();
+        for(int i = nums2.length - 1; i >= 0; i--) {
+            int num = nums2[i];
+            while (!stack.isEmpty() && num >= stack.peek()) {
+                stack.pop();
+            }
+            hs.put(num, stack.isEmpty() ? -1 : stack.peek());
+            stack.push(num);
         }
+
+        int[] res = new int[nums1.length];
+        for(int i = 0; i < nums1.length; i++) {
+            res[i] = hs.get(nums1[i]);
+        }
+        return res;
     }
 }
