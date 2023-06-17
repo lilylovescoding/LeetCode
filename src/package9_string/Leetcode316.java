@@ -34,34 +34,6 @@ public class Leetcode316 {
         return sb.toString();
     }
 
-//    public String removeDuplicateLetters(String s) {
-//        Map<Character, Integer> map = new TreeMap<>();
-//        char[] arr = s.toCharArray();
-//        System.out.println(arr);
-//        int len = s.length();
-//        for (int i = 0; i < len; i++) {
-//            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
-//        }
-//        System.out.println(map);
-//
-//        List<Character> list = new ArrayList<>();
-//
-//        int i = 0;
-//        while (i < len && map.size() >= 1) {
-//            for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-//                while (i < len - 1 && map.containsKey(arr[i])) {
-//                    i++;
-//                }
-//                list.add(arr[i]);
-//                map.remove(arr[i]);
-//                System.out.println(map);
-//                break;
-//            }
-//            i++;
-//        }
-//        return String.valueOf(list);
-//    }
-
     public static void main(String[] args) {
         Leetcode316 lee = new Leetcode316();
         String s = "cbacdcbc";
