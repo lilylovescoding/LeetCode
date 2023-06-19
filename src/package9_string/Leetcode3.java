@@ -9,7 +9,7 @@ import java.util.Map;
 // s = "bbbbb" => 1
 // s = "pwwkew" => 3
 public class Leetcode3 {
-    //TC:O(n)  SC:O(n)
+    //滑动窗口：TC:O(n)  SC:O(n)
     public int lengthOfLongestSubstring(String s) {
         if(s.length() == 0){
             return 0;

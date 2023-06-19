@@ -33,7 +33,7 @@ public class Leetcode926 {
         int num = s.charAt(0) == '0' ? 0 : 1;
 
         dp[0] = 0;
-        for(int i = 0; i < s.length(); i++) {
+        for(int i = 1; i < len; i++) {
             if(s.charAt(i) == '1') {
                 dp[i] = dp[i - 1];
                 num ++;
